@@ -1,12 +1,8 @@
-# Create T3 App
+# T3 on Zerops
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is a template to deploy a T3 stack next auth with prisma and postgres orm on [zerops](https://zerops.io).
 
-## What's next? How do I make an app with this?
-
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
-
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+### Tech Stack Used
 
 - [Next.js](https://nextjs.org)
 - [NextAuth.js](https://next-auth.js.org)
@@ -15,15 +11,41 @@ If you are not familiar with the different technologies used in this project, pl
 - [Tailwind CSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
 
-## Learn More
+### Importing this project - Fastest Way
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+Go to Zerops dashboard and click on import a project to i
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+```yaml
+project:
+  name: zerops-nitro
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+services:
+  - hostname: nitrojs
+    type: nodejs@20
+    buildFromGit: https://github.com/nermalcat69/t3-zerops
+    ports:
+      - port: 3000
+        httpSupport: true
+    enableSubdomainAccess: true
+    minContainers: 1
+```
 
-## How do I deploy this?
+### Deploying a project from scratch
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+Go to Zerops Dashboard, Import Project using the import yaml mentioned below
+
+Go to your project and create a new postgresql service 
+
+
+`openssl rand -base64 32`
+
+
+### Setting up ENVS
+
+
+## Facing issues while Deploying
+
+Make sure you've added
+- [ ] Environment Variables mentioned in [.env.example](https://github.com/Nermalcat69/T3-Zerops/blob/main/.env.example).
+
+For more info you can use [Zerops Docs](https://docs.zerops.io/) or reach out for help at their [Discord Server](https://discord.gg/RzaeZZJVEj).
