@@ -17,10 +17,10 @@ Go to Zerops dashboard and click on import a project to i
 
 ```yaml
 project:
-  name: zerops-nitro
+  name: zerops-t3
 
 services:
-  - hostname: nitrojs
+  - hostname: t3stack
     type: nodejs@20
     buildFromGit: https://github.com/nermalcat69/t3-zerops
     ports:
