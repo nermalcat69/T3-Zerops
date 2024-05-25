@@ -36,8 +36,9 @@ services:
       NEXTAUTH_URL: http://t3.zerops.xyz
       # you can generate your secret using `openssl rand -base64 32`  
       NEXTAUTH_SECRET: gw7RPnvDKc4lohNT/8LdMe1bKBuURAW4gPme7eOYvYs
-      DISCORD_CLIENT_ID: # grab one from discord developer portal
-      DISCORD_CLIENT_SECRET: # grab one from discord developer portal
+      # grab one from discord developer portal
+      DISCORD_CLIENT_ID: discord-client-id
+      DISCORD_CLIENT_SECRET: discord-client-secret
   - hostname: db
     type: postgresql@16
     mode: NON_HA
