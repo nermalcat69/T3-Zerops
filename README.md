@@ -1,6 +1,6 @@
 # T3 on Zerops
 
-This is a template to deploy a T3 stack next auth with prisma and postgres orm on [zerops](https://zerops.io).
+This is a template to deploy a T3 stack project with next auth + prisma + postgres on [zerops](https://zerops.io).
 
 ### Tech Stack Used
 
