@@ -29,11 +29,7 @@ services:
     enableSubdomainAccess: true
     minContainers: 1
     envSecrets:
-      DB_HOST: db
-      DB_NAME: db
-      DB_PASS: ${db_password}
-      DB_PORT: "5432"
-      DB_USER: ${db_user}
+      DATABASE_URL: postgresql://${user}:${password}@db:5432
   - hostname: db
     type: postgresql@16
     mode: NON_HA
