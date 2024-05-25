@@ -28,24 +28,32 @@ services:
         httpSupport: true
     enableSubdomainAccess: true
     minContainers: 1
+    envSecrets:
+      DB_HOST: db
+      DB_NAME: db
+      DB_PASS: ${db_password}
+      DB_PORT: "5432"
+      DB_USER: ${db_user}
+  - hostname: db
+    type: postgresql@16
+    mode: NON_HA
+    priority: 1
 ```
 
 ### Deploying a project from scratch
 
 Go to Zerops Dashboard, Import Project using the import yaml mentioned below
 
-Go to your project and create a new postgresql service 
-
+Go to your project and create a new postgresql service
 
 `openssl rand -base64 32`
 
-
 ### Setting up ENVS
-
 
 ## Facing issues while Deploying
 
 Make sure you've added
+
 - [ ] Environment Variables mentioned in [.env.example](https://github.com/Nermalcat69/T3-Zerops/blob/main/.env.example).
 
 For more info you can use [Zerops Docs](https://docs.zerops.io/) or reach out for help at their [Discord Server](https://discord.gg/RzaeZZJVEj).

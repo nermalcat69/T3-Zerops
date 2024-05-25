@@ -1,7 +1,7 @@
 zerops:
   # supports monorepositories, just add
   # one setup section after the other
-  - setup: t3
+  - setup: t3stack
     # ==== how to build your application ====
     build:
       # select what technology should the
