@@ -13,7 +13,7 @@ This is a template to deploy a T3 stack next auth with prisma and postgres orm o
 
 ### Importing this project - Fastest Way
 
-Go to Zerops dashboard and click on import a project to i
+Go to Zerops Dashboard, Import Project using the import yaml mentioned below
 
 ```yaml
 project:
@@ -29,12 +29,12 @@ services:
     enableSubdomainAccess: true
     minContainers: 1
     envSecrets:
-      # This will automatically connected to the postgres with the hostname "db"
+      # Automatically connects to the pg with the hostname "db" in the project
       DATABASE_URL: postgresql://${user}:${password}@db:5432
-      # Replace with your subdomain url later in your nodejs service's 
+      # Replace with your subdomain url later in your nodejs service's
       # environment variables section
       NEXTAUTH_URL: http://t3.zerops.xyz
-      # You can generate your secret using `openssl rand -base64 32`  
+      # You can generate your secret using `openssl rand -base64 32` in your terminal
       NEXTAUTH_SECRET: gw7RPnvDKc4lohNT/8LdMe1bKBuURAW4gPme7eOYvYs
       # Grab your client secret and id from https://discord.com/developers/applications
       DISCORD_CLIENT_ID: discord-client-id
@@ -44,14 +44,6 @@ services:
     mode: NON_HA
     priority: 1
 ```
-
-### Deploying a project from scratch
-
-Go to Zerops Dashboard, Import Project using the import yaml mentioned below
-
-Go to your project and create a new postgresql service
-
-`openssl rand -base64 32`
 
 ### Setting up ENVS
 
