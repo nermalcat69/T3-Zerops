@@ -29,7 +29,8 @@ services:
     enableSubdomainAccess: true
     minContainers: 1
     envSecrets:
-      DATABASE_URL: postgresql://${user}:${password}@db:5432 # this will automatically connected to the postgres with the hostname "db"
+    # this will automatically connected to the postgres with the hostname "db"
+      DATABASE_URL: postgresql://${user}:${password}@db:5432
       NEXTAUTH_URL: http://t3.zerops.xyz # replace with your subdomain url later in your nodejs service's environment variables section
       NEXTAUTH_SECRET: gw7RPnvDKc4lohNT/8LdMe1bKBuURAW4gPme7eOYvYs # you can generate your secret using `openssl rand -base64 32`  
       DISCORD_CLIENT_ID: # grab one from discord developer portal
