@@ -31,8 +31,9 @@ services:
     envSecrets:
       # Automatically connects to the pg with the hostname "db" in the project
       DATABASE_URL: postgresql://${user}:${password}@db:5432
-      # Replace with your subdomain url later in your nodejs service's
+      # Replace with your url later in your nodejs service's
       # environment variables section
+      # eg: yourproject.zerops.app, testproject.com, test.example.com
       NEXTAUTH_URL: http://t3.zerops.xyz
       # You can generate your secret using `openssl rand -base64 32` in your terminal
       NEXTAUTH_SECRET: gw7RPnvDKc4lohNT/8LdMe1bKBuURAW4gPme7eOYvYs
@@ -44,8 +45,6 @@ services:
     mode: NON_HA
     priority: 1
 ```
-
-### Setting up ENVS
 
 ## Facing issues while Deploying
 
