@@ -34,9 +34,9 @@ services:
       # Replace with your subdomain url later in your nodejs service's 
       # environment variables section
       NEXTAUTH_URL: http://t3.zerops.xyz
-      # you can generate your secret using `openssl rand -base64 32`  
+      # You can generate your secret using `openssl rand -base64 32`  
       NEXTAUTH_SECRET: gw7RPnvDKc4lohNT/8LdMe1bKBuURAW4gPme7eOYvYs
-      # grab one from discord developer portal
+      # Grab your client secret and id from https://discord.com/developers/applications
       DISCORD_CLIENT_ID: discord-client-id
       DISCORD_CLIENT_SECRET: discord-client-secret
   - hostname: db
